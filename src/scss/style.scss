@@ -1,0 +1,191 @@
+@import "mixin";
+@import "variables";
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visible {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+.header {
+  background: url("../img/header.png") no-repeat center;
+  background-size: cover;
+  height: 800px;
+
+  &_container {
+    margin: 0 auto;
+    padding: 31px 10px 0 10px;
+    max-width: 1200px;
+    width: 100%;
+    @include flex-element(space-between, center);
+
+    &_logo {
+      width: 154px;
+      @include flex-element(space-between, center);
+
+      &:hover .header_container_logo_text {
+        color: $white-color;
+      }
+
+      &_text {
+        @include lato-bold();
+        font-size: 24px;
+        color: $purple-color;
+      }
+    }
+
+    &_navi {
+      @include flex-element(space-between, center);
+      gap: 0 48px;
+
+      &_btn-buy {
+        width: 145px;
+        height: 37px;
+        background: $purple-color;
+        border-radius: 40px;
+        font-size: 16px;
+        color: $white-color;
+        @include montserrat-bold();
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+          color: $purple-color;
+          background-color: $white-color;
+        }
+      }
+
+      &_list {
+        @include flex-element(space-between, center);
+        gap: 0 48px;
+
+        &_item {
+          a {
+            font-size: 16px;
+            @include montserrat-bold();
+            color: $purple-color;
+          }
+
+          &:hover a {
+            color: $white-color;
+          }
+        }
+      }
+
+
+      &_btn-menu {
+        display: none;
+      }
+    }
+  }
+
+  p {
+    text-align: center;
+  }
+
+  &_title {
+    padding-top: 115px;
+    font-size: 82px;
+    @include montserrat-bold();
+    color: $white-color;
+  }
+
+  &_subtitle {
+    padding-top: 19px;
+    font-size: 30px;
+    @include lato-regular();
+    color: $purple-color;
+  }
+
+  &_description {
+    padding-top: 19px;
+    font-size: 16px;
+    @include montserrat-regular();
+    color: $gray-color;
+  }
+}
+
+.people {
+  background: url("../img/testmonials-bg 1.png") no-repeat center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  padding-bottom: 18px;
+
+  &_title {
+    padding: 108px 10px 0 10px;
+    font-size: 48px;
+    @include montserrat-bold();
+    color: $white-color;
+    text-align: center;
+  }
+
+  &_container {
+    margin: 0 auto;
+    padding: 82px 10px 0 10px;
+    @include flex-element(space-between, flex-start);
+    flex-wrap: wrap;
+    row-gap: 112px;
+
+    &_item {
+      width: 30%;
+      height: 142px;
+      flex-direction: column;
+      @include flex-element(space-between, center);
+
+      &_text {
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        @include lato-italic();
+        width: 345px;
+        color: $white-color;
+      }
+
+      &_link {
+        &_image {
+          width: 100%;
+        }
+
+
+      }
+    }
+  }
+
+  &_footer {
+    margin: 0 auto;
+    padding-top: 118px;
+    padding-bottom: 18px;
+    text-align: center;
+    width: 887px;
+    color: $light-purple-color;
+    font-size: 14px;
+    line-height: 21px;
+    @include lato-regular();
+  }
+
+  hr {
+    position: absolute;
+    margin: 0 auto;
+    height: 2px;
+    color: $dark-purple-color;
+    background-color: $dark-purple-color;
+    width: 70%;
+    top: 99%;
+    left: 15%;
+  }
+}
+
+
+@import "media-screen-tablet";
+@import "media-screen-mobile";
+
