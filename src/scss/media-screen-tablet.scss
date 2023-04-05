@@ -1,4 +1,4 @@
-@media screen and (max-width: 992px) {
+@media screen and (min-width:481px) and (max-width: 992px) {
   .header {
     &::before {
       position: absolute;
@@ -50,6 +50,37 @@
       font-size: 14px;
     }
   }
+  .advantages{
+    &__mobile__text{
+      display: block;
+    }
+    &__conteiner {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: 50px;
+      &__left{
+        &__list__item{
+          &__img{
+            width: 20%;
+          }
+          &__content{
+            width: 80%;
+          }
+        }
+        width: 100%;
+      }
+      &__right {
+        padding: 73px 0 0 68px;
+        width:100%;
+        &--text {
+          display: none;
+        }
+        &--img{
+          width: 100%;
+        }
+      }
+    }
+  }
   .people {
     &_title {
       padding: 86px 10px 0 10px;
@@ -71,6 +102,18 @@
     &_footer {
       width: 704px;
       padding-top: 68px;
+    }
+  }
+  .footer_fork{
+    height: auto;
+    &__container{
+      width:60%;
+      height: auto;
+      flex-wrap: wrap;
+      row-gap: 30px;
+      &__item{
+
+      }
     }
   }
 }

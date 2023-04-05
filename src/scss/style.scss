@@ -81,7 +81,6 @@ a {
         }
       }
 
-
       &_btn-menu {
         display: none;
       }
@@ -113,7 +112,183 @@ a {
     color: $gray-color;
   }
 }
+.revolutionary {
+  position: relative;
+  margin-bottom: 100px;
+  &__btn {
+    position: absolute;
+    width: 390px;
+    height: 62px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: $purple-color;
+    @include montserrat-bold();
+    color: $white-color;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    font-size: 21px;
+    &:hover {
+      background: $white-color;
+      color: $purple-color;
+      border: 2px solid $purple-color;
+    }
+  }
+  &__text {
+    text-align: center;
+    &--small {
+      @include montserrat-regular();
+      font-size: 14px;
+      color: $gray-color;
+      padding-top: 50px;
+    }
+    &--title {
+      padding-top: 66px;
+      @include montserrat-bold();
+      font-size: 54px;
+      color: $purple-black-color;
+    }
+    &--discription {
+      padding-top: 35px;
+      @include lato-regular();
+      font-size: 21px;
+      color: #323232;
+      margin: 0 auto;
+    }
+  }
+  &__btns {
+    width: 400px;
+    margin: 13px auto 70px auto;
+    @include flex-element(space-between, center);
+    &__item {
+      width: 30%;
+      height: 26px;
+      @include flex-element(flex-start, center);
 
+      border-radius: 2px;
+
+      &__btn {
+        @include flex-element(center, center);
+        column-gap: 4px;
+        border: 1px solid #c9d1c9;
+        border-bottom-left-radius: 3px;
+        border-top-left-radius: 3px;
+        height: 26px;
+        width: 50%;
+        background: #f1ecec;
+
+        p {
+          font-size: 10px;
+        }
+        svg {
+          width: 10px;
+          height: 10px;
+        }
+      }
+      &__count {
+        border: 1px solid #c9d1c9;
+        border-bottom-right-radius: 3px;
+        border-top-right-radius: 3px;
+        width: 50%;
+        height: 26px;
+        line-height: 26px;
+        text-align: center;
+        border-left: none;
+      }
+    }
+  }
+}
+/*<!--<Here is what you get start>-->*/
+.advantages {
+  background: #f4f4f4;
+  &__mobile__text{
+    display: none;
+    text-align: center;
+    color: $purple-color;
+    font-size: 42px;
+    padding-top: 61px;
+    @include montserrat-bold()
+  }
+  &__conteiner {
+    @include flex-element(space-between, center);
+    padding: 100px 10px 33px 90px;
+    &__left {
+      width: 40%;
+      &__list {
+        @include flex-element(flex-start, flex-start);
+        flex-direction: column;
+        row-gap: 35.5px;
+        &__item {
+          @include flex-element(space-between, flex-start);
+          &__img {
+            width: 30%;
+            @include flex-element(center, flex-start);
+
+            img {
+              width: auto;
+            }
+          }
+          
+          &__content {
+            width: 70%;
+            &--title {
+              @include montserrat-regular();
+              font-size: 16px;
+              color: #323232;
+            }
+            &--text {
+              @include montserrat-regular();
+              font-size: 14px;
+              color: $gray-color;
+              padding-top: 16px;
+              line-height: 21px;
+            }
+          }
+        }
+      }
+    }
+    &__right {
+      width: 50%;
+      &--text {
+        color: $purple-color;
+        font-size: 48px;
+        padding-left: 15px;
+        @include montserrat-bold();
+      }
+      &--img {
+        width: 100%;
+        margin-top: 19px;
+      }
+    }
+  }
+}
+
+.experimental {
+  margin: 0 auto;
+  height: 711px;
+  background: #f4f4f4;
+  &__text {
+    // padding-left: 50%;
+    padding: 94px 0 19px 53%;
+    line-height: 50px;
+  }
+  &__img {
+    padding-left: 740px;
+    // margin: 0 auto;
+    // padding: 159px 0 0 740px;
+  }
+}
+.content__list {
+  margin: 0 auto;
+  transform: translate(-50% -50%);
+  width: 405;
+  &__img {
+    width: 111px;
+    height: 64px;
+    padding: 200px;
+  }
+}
+/*<!--<Here is what you get end>-->*/
 .people {
   background: url("../img/testmonials-bg 1.png") no-repeat center;
   background-size: cover;
@@ -155,12 +330,9 @@ a {
         &_image {
           width: 100%;
         }
-
-
       }
     }
   }
-
   &_footer {
     margin: 0 auto;
     padding-top: 118px;
@@ -184,8 +356,145 @@ a {
     left: 15%;
   }
 }
+/*<!-- /Fork Subscription Pricing start -->*/
+.footer_fork {
+  background: url("../img/background\ Fork\ Subscription\ Pricing.png")
+    no-repeat center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  height: 847px;
+  &__text {
+    color: $white-color;
+    text-align: center;
+    font-size: 48px;
+    @include montserrat-bold();
+    padding-top: 83px;
+    padding-bottom: 61px;
+  }
+  &__container {
+    @include flex-element(center, center);
+    padding: 0 10px;
+    row-gap: 15px;
+    column-gap: 15px;
+    margin: 0 auto;
+    width: 1130px;
+    height: 560px;
 
+    &__item {
+      width: 257px;
+      height: 457px;
+      &__header {
+        position: relative;
+       
+        height: 97px;
+        @include flex-element(center, center);
+        &::before{
+          content: "";
+          position: absolute;
+          height: 97px;
+          width: 100%;
+          opacity: 0.06;
+          background: $white-color;
+        }
+        p {
+          color: $white-color;
+          font-size: 24px;
+          @include montserrat-regular();
+          text-transform: uppercase;
+        }
+      }
+      &__body {
+        height: 360px;
+        position: relative;
+        z-index: 1;
+        &::before{
+          content: "";
+          position: absolute;
+          height: 360px;
+          width: 100%;
+          opacity: 0.11;
+          background: $white-color;
+          z-index: 0;
+        }
+        &--title {
+          @include montserrat-regular();
+          font-size: 60px;
+          color: $white-color;
+          text-align: center;
+          padding: 30px 0 20px 0;
+          span{
+            font-weight:600;
+          }
+        }
+        &--text { 
+        @include montserrat-regular();
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $white-color;
+        text-align: center;
+        height: 40px;
+        }
+        &--hr {
+          width: 60px;  
+          height: 5px;
+          background: $purple-color;
+          margin: 18px auto 36px auto;
+          border:none;
+        }
+        &--btn {
+          display: block;
+          width: 160px;
+          position: relative;
+          height: 42px;
+          border-radius: 50px;
+          margin: 38px auto;
+          border: none;
+          background: none;
+          overflow: hidden;
+          @include montserrat-regular();
+          color: $white-color;
+          text-transform: uppercase;
+          font-size: 15px;
+          &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left:0;
+            height: 42px;
+            width: 100%;
+            opacity: 0.11;
+            background: $white-color;
+          }
+        }
+      }
+    }
+    .item__active{
+      height: auto;
+      background: #463048;
+      &__header{
+        height: 111px;
+        background: #000;
+        opacity: 0.11;
+        &::before{
+          height: 111px;
+          background: #000;
+        }
+      }
+      &__body{
+        height: 452px;
+        &::before{
+          z-index: -1;
+          height: 452px;
+          background: #463048;
+          opacity: 0.84;
+        }
+      }
+    }
+  }
+}
+/*<!-- /Fork Subscription Pricing end -->*/
 
 @import "media-screen-tablet";
-@import "media-screen-mobile";
 
+@import "media-screen-mobile";

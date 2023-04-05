@@ -120,6 +120,48 @@
       padding-top: 14px;
     }
   }
+  .revolutionary{
+    &__text{
+      &--title{
+        font-size: 26px;
+        line-height: 28px;
+      }
+      &--discription{
+        width: 276px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+    &__btns {
+      flex-wrap: wrap;
+      width: 251px;
+      justify-content: center;
+      gap: 20px 14px;
+      &__item {
+        width: 118px;
+      }    
+    }
+  }
+
+  .advantages {
+    &__mobile__text {
+      font-size: 32px;
+    }
+    &__conteiner {
+      padding: 120px 0 58px 0;
+      &__left__list__item {
+        justify-content: center;
+        flex-wrap: wrap;
+        &__content {
+          width: 100%;
+          p{
+            text-align: center;
+          }
+        }
+      }
+
+    }
+  }
   .people {
     padding-bottom: 22px;
 
@@ -146,6 +188,13 @@
     &_footer {
       width: 251px;
       padding-top: 37px;
+    }
+  }
+  .footer_fork{
+    height: auto;
+    &__container {
+      width: 257px;
+      row-gap: 18px;
     }
   }
 }
