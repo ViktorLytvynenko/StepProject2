@@ -45,7 +45,7 @@ a {
 
     &_navi {
       @include flex-element(space-between, center);
-      gap: 0 48px;
+      gap: 0 40px;
 
       &_btn-buy {
         width: 145px;
@@ -69,6 +69,8 @@ a {
         gap: 0 48px;
 
         &_item {
+          background: none;
+          border:none;
           a {
             font-size: 16px;
             @include montserrat-bold();
@@ -153,6 +155,7 @@ a {
       @include lato-regular();
       font-size: 21px;
       color: #323232;
+      width: 861px;
       margin: 0 auto;
     }
   }
@@ -364,6 +367,7 @@ a {
   height: auto;
   position: relative;
   height: 847px;
+  margin-top: -7px;
   &__text {
     color: $white-color;
     text-align: center;

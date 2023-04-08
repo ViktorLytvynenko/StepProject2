@@ -1,4 +1,4 @@
-@media screen and (min-width:481px) and (max-width: 992px) {
+@media screen and (max-width: 992px) {
   .header {
     &::before {
       position: absolute;
@@ -81,6 +81,13 @@
       }
     }
   }
+  .revolutionary {
+    &__text{ 
+      &--discription{ 
+        width: 100%;
+      }
+    }
+  }
   .people {
     &_title {
       padding: 86px 10px 0 10px;
@@ -88,7 +95,7 @@
     }
 
     &_container {
-      width: 768px;
+      width: 100%;
       row-gap: 88px;
 
       &_item {
@@ -100,14 +107,17 @@
     }
 
     &_footer {
-      width: 704px;
-      padding-top: 68px;
+      width: 100%;
+      padding: 68px 10px 0 10px;
+      
     }
   }
   .footer_fork{
     height: auto;
+    margin-top: -5px;
     &__container{
-      width:60%;
+      padding-bottom: 20px;
+      width:75%;
       height: auto;
       flex-wrap: wrap;
       row-gap: 30px;
