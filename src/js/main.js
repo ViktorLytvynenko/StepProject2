@@ -2,6 +2,10 @@ const headerContainerLogo = document.querySelector(".header_container_logo");
 const purpleLogo = document.querySelector(".purple-logo");
 const whiteLogo = document.querySelector(".white-logo");
 
+const burgerBtn = document.querySelector(".header_container_navi_btn-menu");
+const headerContainerNaviList = document.querySelector(".header_container_navi_list");
+const visibleImage = document.querySelector(".visible");
+const hiddenImage = document.querySelector(".hidden");
 whiteLogo.style.display = "none";
 
 headerContainerLogo.addEventListener("mouseenter", function () {
@@ -13,12 +17,25 @@ headerContainerLogo.addEventListener('mouseleave', () => {
     whiteLogo.style.display = 'none';
 });
 
-const burgerBtn = document.querySelector(".header_container_navi_btn-menu");
-const headerContainerNaviList = document.querySelector(".header_container_navi_list");
-const visibleImage = document.querySelector(".visible");
-const hiddenImage = document.querySelector(".hidden");
-
 let statusNavOpen = "none"
+
+window.addEventListener('resize', () => {
+    let width = document.querySelector(".header").offsetWidth
+    if(width >= 481){
+        headerContainerNaviList.style.display = "flex";
+    } else {
+        statusNavOpen = "none"
+
+        visibleImage.classList.toggle("visible");
+        if(visibleImage.classList[1] == "hidden"){
+            statusNavOpen = "block"
+        }
+        headerContainerNaviList.style.display = statusNavOpen;
+
+    }
+})
+
+
 
 burgerBtn.addEventListener("click", function () {
     statusNavOpen = statusNavOpen === "none" ? "block" : "none"
@@ -31,12 +48,12 @@ burgerBtn.addEventListener("click", function () {
 
 document.addEventListener("click", function(event) {
     console.log(event.target.parentNode)
-        if (event.target.id !== "headerContainerNaviList" && event.target.id!=="naviBtnMenu" && event.target.parentNode.id!=="naviBtnMenu" && statusNavOpen!=="none"){
-            statusNavOpen = "none"
-            headerContainerNaviList.style.display = statusNavOpen;
-            visibleImage.classList.toggle("visible");
-            visibleImage.classList.toggle("hidden");
-            hiddenImage.classList.toggle("hidden");
-            hiddenImage.classList.toggle("visible");
-        }
+    if (event.target.id !== "headerContainerNaviList" && event.target.id!=="naviBtnMenu" && event.target.parentNode.id!=="naviBtnMenu" && statusNavOpen!=="none"){
+        statusNavOpen = "none"
+        headerContainerNaviList.style.display = statusNavOpen;
+        visibleImage.classList.toggle("visible");
+        visibleImage.classList.toggle("hidden");
+        hiddenImage.classList.toggle("hidden");
+        hiddenImage.classList.toggle("visible");
+    }
 })
