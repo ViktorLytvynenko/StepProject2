@@ -155,7 +155,7 @@
   .footer_fork{
     height: auto;
     &__container {
-      width: 257px;
+      max-width: 320px;
       row-gap: 18px;
       .item__active{
         width: 300px;

@@ -116,7 +116,7 @@
     height: auto;
     &__container{
       padding-bottom: 20px;
-      width:75%;
+      max-width: 768px;
       height: auto;
       flex-wrap: wrap;
       row-gap: 30px;

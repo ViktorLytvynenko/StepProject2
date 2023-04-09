@@ -13,7 +13,7 @@ import gulpUglify from "gulp-uglify";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import spriteGulp from "gulp-svg-sprite"
-import gulpUnCSS from "gulp-uncss"
+import uncss from "gulp-uncss"
 
 
 const sass = gulpSass(dartSass);
@@ -41,6 +41,24 @@ function serve() {
 function styles() {
     return src("./src/scss/styles.scss")
         .pipe(sass().on('error', sass.logError))
+        .pipe(uncss({
+                html: ['*.html'],
+                ignore: [
+                    '.open',
+                    '.is-open',
+                    '.opened',
+                    '.close',
+                    '.show',
+                    '.hide',
+                    '.active',
+                    '.d-none',
+                    '.visible',
+                    '.checked',
+                    ".visible",
+                    ".hidden",
+                ],
+            })
+        )
         .pipe(
             autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], {
                 cascade: true,
@@ -77,14 +95,6 @@ function sprite() {
         .pipe(dest("./dist/sprite"))
         .pipe(bsServer.reload({stream: true}))
 }
-
-// function unCSS {
-//     return gulp.src('site.css')
-//         .pipe(uncss({
-//             html: ['index.html', 'posts/**/*.html', 'http://example.com']
-//         }))
-//         .pipe(gulp.dest('./out'));
-// }
 
 function watcher() {
     watch('./src/scss/**/*.scss', styles)
