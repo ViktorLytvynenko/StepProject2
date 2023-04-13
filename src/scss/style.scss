@@ -167,7 +167,6 @@ a {
       width: 30%;
       height: 26px;
       @include flex-element(flex-start, center);
-
       border-radius: 2px;
 
       &__btn {
@@ -313,6 +312,8 @@ a {
 
   &_container {
     margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
     padding: 82px 10px 0 10px;
     @include flex-element(space-between, flex-start);
     flex-wrap: wrap;
