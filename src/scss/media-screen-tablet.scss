@@ -95,7 +95,7 @@
     }
 
     &_container {
-      width: 100%;
+      max-width: 768px;
       row-gap: 88px;
 
       &_item {
