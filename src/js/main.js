@@ -20,21 +20,24 @@ headerContainerLogo.addEventListener('mouseleave', () => {
 let statusNavOpen = "none"
 
 window.addEventListener('resize', () => {
-    let width = document.querySelector(".header").offsetWidth
-    if(width >= 481){
+    let width = window.innerWidth
+
+    if (width >= 481) {
         headerContainerNaviList.style.display = "flex";
+        burgerBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+        })
     } else {
         statusNavOpen = "none"
 
         visibleImage.classList.toggle("visible");
-        if(visibleImage.classList[1] == "hidden"){
+        if (visibleImage.classList[1] == "hidden") {
             statusNavOpen = "block"
         }
         headerContainerNaviList.style.display = statusNavOpen;
 
     }
 })
-
 
 
 burgerBtn.addEventListener("click", function () {
@@ -46,9 +49,9 @@ burgerBtn.addEventListener("click", function () {
     hiddenImage.classList.toggle("visible");
 })
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
     console.log(event.target.parentNode)
-    if (event.target.id !== "headerContainerNaviList" && event.target.id!=="naviBtnMenu" && event.target.parentNode.id!=="naviBtnMenu" && statusNavOpen!=="none"){
+    if (event.target.id !== "headerContainerNaviList" && event.target.id !== "naviBtnMenu" && event.target.parentNode.id !== "naviBtnMenu" && statusNavOpen !== "none") {
         statusNavOpen = "none"
         headerContainerNaviList.style.display = statusNavOpen;
         visibleImage.classList.toggle("visible");

@@ -9,7 +9,11 @@
     &_container {
       max-width: 320px;
       justify-content: space-between;
-
+      &_logo {
+        &_text {
+          display: none;
+        }
+      }
 
       &_navi {
         justify-content: space-between;

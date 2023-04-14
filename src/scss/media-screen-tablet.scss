@@ -15,12 +15,6 @@
       z-index: 1;
       align-items: flex-start;
 
-      &_logo {
-        &_text {
-          display: none;
-        }
-      }
-
       &_navi {
         flex-wrap: wrap;
         justify-content: flex-end;
@@ -31,8 +25,13 @@
         }
 
         &_list {
-          width: 100%;
+          width: 80%;
           order: 2;
+          position: absolute;
+          left: 10%;
+          top: 90px;
+          padding: 0 10px 0 10px;
+          gap: 0;
         }
       }
     }

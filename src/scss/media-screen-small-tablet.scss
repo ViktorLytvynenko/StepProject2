@@ -1,0 +1,12 @@
+@media screen and (max-width: 600px) {
+  .header {
+    &_container {
+      &_navi {
+        &_list {
+          left: 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
