@@ -59,6 +59,7 @@
       padding-top: 50px;
       &__left{
         &__list__item{
+          column-gap: 20px;
           &__img{
             width: 20%;
           }
@@ -84,7 +85,11 @@
     &__text{ 
       &--discription{ 
         width: 100%;
+        padding: 33px 10px 0 10px;
       }
+    }
+    &__btns {
+      margin-top: 40px;
     }
   }
   .people {

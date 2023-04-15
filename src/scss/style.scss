@@ -119,7 +119,8 @@ a {
 
 .revolutionary {
   position: relative;
-  margin-bottom: 100px;
+  max-width: 1200px;
+  margin: 0 auto 100px auto;
 
   &__btn {
     position: absolute;
@@ -189,6 +190,8 @@ a {
         height: 26px;
         width: 50%;
         background: #f1ecec;
+        cursor: pointer;
+        text-decoration: none;
 
         p {
           font-size: 10px;
@@ -209,6 +212,7 @@ a {
         line-height: 26px;
         text-align: center;
         border-left: none;
+        color: #000;
       }
     }
   }
@@ -230,6 +234,9 @@ a {
   &__conteiner {
     @include flex-element(space-between, center);
     padding: 100px 10px 33px 90px;
+    max-width: 1200px;
+    margin: 0 auto;
+
 
     &__left {
       width: 40%;
@@ -416,7 +423,7 @@ a {
     row-gap: 15px;
     column-gap: 15px;
     margin: 0 auto;
-    max-width: 1130px;
+    max-width: 1200px;
     width: 100%;
     height: 560px;
 
