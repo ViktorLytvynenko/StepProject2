@@ -145,6 +145,7 @@ a {
 
   &__text {
     text-align: center;
+    
 
     &--small {
       @include montserrat-regular();
@@ -167,6 +168,8 @@ a {
       color: #323232;
       width: 861px;
       margin: 0 auto;
+      padding-bottom: 13px;
+      
     }
   }
 
